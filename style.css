@@ -51,7 +51,7 @@
 
 .header {
 	background-color: var(--primary);
-	background-image: url("0.jpeg");
+	background-image: url("https://cdn.glitch.global/241a930a-0b39-4f77-b845-ed4d22ed6c9d/0.jpeg?v=1658670776376");
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
@@ -679,14 +679,14 @@ h1 {
 }
 
 .container-about:before {
-	background-image: url(31.jpg);
+	background-image: url(https://cdn.glitch.global/241a930a-0b39-4f77-b845-ed4d22ed6c9d/31.jpg?v=1658671189937);
 	background-size: cover;
 	/* z-index: 0; */
 	transition: opacity 4s;
 }
 
 .container-about:after {
-	background-image: url(36.jpg);
+	background-image: url(https://cdn.glitch.global/241a930a-0b39-4f77-b845-ed4d22ed6c9d/36.jpg?v=1658671274168);
 	background-size: cover;
 }
 
