@@ -1,0 +1,252 @@
+
+** {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #161616;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	height: 100vh;
+	background-repeat: no-repeat;
+
+}
+
+section::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(#DA22FF, #9733EE);
+	clip-path: circle(30% at right 70%);
+	z-index: -1;
+}
+
+section::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(#E55D87, #5FC3E4);
+	clip-path: circle(20% at 10% 10%);
+	z-index: -1;
+}
+
+
+:root {
+	--primary: rgba(37, 37, 37, 1.0);
+	--secondary: rgb(216, 23, 216);
+	--shades: rgba(238, 238, 238, 1.0);
+}
+
+p {
+	color: #fff;
+	font-family: 'Montserrat';
+	font-weight: 600;
+	font-size: 40px;
+	font: bold;
+	display: flex;
+	justify-content: center;
+	text-shadow: rgba(255, 255, 255, .5) 1px 1px, rgba(100, 100, 100, .3) 3px 7px 3px;
+}
+
+p:hover {
+	color: var(--secondary);
+}
+
+.card .content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container {
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 1px;
+}
+
+.cards-container {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.card {
+	max-width: 700px;
+	height: 300px;
+	position: relative;
+	box-shadow: 0 0 15px rgba(0, 0, 0, .2);
+	margin: 25px 0;
+	width: 40%;
+}
+
+@media screen and (max-width: 700px) {
+	.card {
+		width: 45%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.card {
+		width: 90%;
+	}
+}
+
+.card .elms-animation,
+.card .content {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.card .elms-animation {
+	z-index: 5;
+}
+
+.card .elms-animation span {
+	position: absolute;
+	background-color: rgba(0, 0, 0, .6);
+	height: 0;
+	width: 0;
+	transition: all .5s ease-out;
+}
+
+.card .elms-animation span.one {
+	top: 0;
+	left: 0;
+}
+
+.card .elms-animation span.two {
+	top: 0;
+	right: 0;
+}
+
+.card .elms-animation span.three {
+	left: 0;
+	bottom: 0;
+}
+
+.card .elms-animation span.four {
+	right: 0;
+	bottom: 0;
+}
+
+.card:hover .elms-animation span {
+	width: 50%;
+	height: 50%;
+}
+
+.card img {
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	object-position: center;
+	display: block;
+}
+
+.card .content {
+	z-index: 6;
+	visibility: hidden;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.card:hover .content {
+	animation: show .3s .4s linear forwards;
+}
+
+.card .content button {
+	padding: .6rem 1.3rem;
+	border: 3px solid #FFF;
+	background: transparent;
+	color: #FFF;
+	font-size: 1rem;
+	outline: none;
+	cursor: pointer;
+	transition: background .3s ease;
+}
+
+.card .content .text {
+	padding: .6rem 1.3rem;
+	border: none;
+	background: transparent;
+	color: #FFF;
+	font-size: 1rem;
+	outline: none;
+	cursor: pointer;
+	transition: background .3s ease;
+}
+
+.card .content button:hover {
+	background: #FFF;
+	color: #333;
+}
+
+@keyframes show {
+	to {
+		visibility: visible;
+	}
+}
+
+
+.btn {
+	margin: 0%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 1;
+
+}
+
+.button9 {
+	position: relative;
+	display: inline-block;
+	color: #777674;
+	font-weight: bold;
+	text-decoration: none;
+	text-shadow: rgba(255, 255, 255, .5) 1px 1px, rgba(100, 100, 100, .3) 3px 7px 3px;
+	user-select: none;
+	padding: 1em 2em;
+	outline: none;
+	border-radius: 3px / 100%;
+	background:
+		linear-gradient(45deg, rgba(255, 255, 255, .0) 30%, rgba(255, 255, 255, .8), rgba(255, 255, 255, .0) 70%),
+		linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0) 90%, rgba(255, 255, 255, .3)),
+		linear-gradient(to right, rgba(125, 125, 125, 1), rgba(255, 255, 255, .9) 45%, rgba(125, 125, 125, .5)),
+		linear-gradient(to right, rgba(125, 125, 125, 1), rgba(255, 255, 255, .9) 45%, rgba(125, 125, 125, .5)),
+		linear-gradient(to right, rgba(223, 190, 170, 1), rgba(255, 255, 255, .9) 45%, rgba(223, 190, 170, .5)),
+		linear-gradient(to right, rgba(223, 190, 170, 1), rgba(255, 255, 255, .9) 45%, rgba(223, 190, 170, .5));
+	background-repeat: no-repeat;
+	background-size: 200% 100%, auto, 100% 2px, 100% 2px, 100% 1px, 100% 1px;
+	background-position: 200% 0, 0 0, 0 0, 0 100%, 0 4px, 0 calc(100% - 4px);
+	box-shadow: rgba(0, 0, 0, .5) 3px 10px 10px -10px;
+	cursor: pointer;
+}
+
+.button9:hover {
+	transition: .5s linear;
+	background-position: -200% 0, 0 0, 0 0, 0 100%, 0 4px, 0 calc(100% - 4px);
+	color: var(--secondary);
+	border: rgba(57, 9, 161, 0.5);
+}
+
+.button9:active {
+	top: 1px;
+}

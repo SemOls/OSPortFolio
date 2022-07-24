@@ -1,27 +1,178 @@
-/*
-This is your site JavaScript code - you can add interactivity and carry out processing
-- Initially the JS writes a message to the console, and moves a button you can add from the README
-*/
+particlesJS("particles-js", {
+    "particles": {
+      "number": {
+        "value": 50,
+        "density": {
+          "enable": true,
+          "value_area": 800
+        }
+      },
+      "color": {
+        "value": "#ffffff"
+      },
+      "shape": {
+        "type": "circle",
+        "stroke": {
+          "width": 0,
+          "color": "#000000"
+        },
+        "polygon": {
+          "nb_sides": 5
+        },
+        "image": {
+          "src": "img/github.svg",
+          "width": 100,
+          "height": 100
+        }
+      },
+      "opacity": {
+        "value": 0.5,
+        "random": false,
+        "anim": {
+          "enable": false,
+          "speed": 1,
+          "opacity_min": 0.1,
+          "sync": false
+        }
+      },
+      "size": {
+        "value": 3,
+        "random": true,
+        "anim": {
+          "enable": false,
+          "speed": 40,
+          "size_min": 0.1,
+          "sync": false
+        }
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#ffffff",
+        "opacity": 0.4,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 3,
+        "direction": "none",
+        "random": false,
+        "straight": false,
+        "out_mode": "out",
+        "bounce": false,
+        "attract": {
+          "enable": false,
+          "rotateX": 600,
+          "rotateY": 1200
+        }
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "grab"
+        },
+        "onclick": {
+          "enable": false,
+          "mode": "push"
+        },
+        "resize": true
+      },
+      "modes": {
+        "grab": {
+          "distance": 140,
+          "line_linked": {
+            "opacity": 1
+          }
+        },
+        "bubble": {
+          "distance": 400,
+          "size": 40,
+          "duration": 2,
+          "opacity": 8,
+          "speed": 3
+        },
+        "repulse": {
+          "distance": 200,
+          "duration": 0.4
+        },
+        "push": {
+          "particles_nb": 4
+        },
+        "remove": {
+          "particles_nb": 2
+        }
+      }
+    },
+    "retina_detect": true
+  });
 
-// Print a message in the browser's dev tools console each time the page loads
-// Use your menus or right-click / control-click and choose "Inspect" > "Console"
-console.log("Hello 🌎");
 
-/* 
-Make the "Click me!" button move when the visitor clicks it:
-- First add the button to the page by following the "Next steps" in the README
-*/
-const btn = document.querySelector("button"); // Get the button from the page
-// Detect clicks on the button
-if (btn) {
-  btn.onclick = function() {
-    // The JS works in conjunction with the 'dipped' code in style.css
-    btn.classList.toggle("dipped");
-  };
+  gsap.to(".pi", {
+      text:"My name is Olga. I`m web-developer...",
+      duration:4,
+      repeatDelay:.7,
+      ease:"power1.in",
+      yoyo:true,
+      y:10,
+      delay:2,
+      })
+      // gsap.from (".pii", {y:-15, opacity:0, duration:3, delay:2, stagger:.1})
+
+  gsap.from(".wrapper", {opacity:0, duration:2, delay:2, stagger:.3})
+  gsap.to(".btn", {y:-30, opacity:1,ease:"power1.in", yoyo:true, duration:3, delay:9})
+
+  gsap.from(".skill-item",  {y:30, opacity:0, duration:4, delay:1, stagger:.6})
+
+  $(function(){
+    $(window).scroll(function(){
+      if($(window).scrollTop() > 100) {
+        $('#scroll_top').show();
+      } else {
+        $('#scroll_top').hide();
+      }
+    });
+   
+    $('#scroll_top').click(function(){
+      $('html, body').animate({scrollTop: 0}, 90);
+      return false;
+    });
+  });
+
+
+  // modal window
+  let modal = document.querySelector('#myModal');
+
+let btn = document.querySelector("#myBtn");
+var span = document.getElementsByClassName("close")[0];
+
+
+btn.onclick = function() {
+    modal.style.display = "block";
 }
 
-// This is a single line JS comment
-/*
-This is a comment that can span multiple lines 
-- use comments to make your own notes!
-*/
+span.onclick= function() {
+  modal.style.display = "none";
+}
+
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+      modal.style.display = "none";
+  }
+}
+   // modal window 
+
+   $(window).load(function () {
+	
+		$("#content").endlessScroll({ 
+			width: "100%", // Ширина строки
+			height: "70px", // Высота строки
+			steps: -2, // Шаг анимации в пикселях. Если число отрицательное - движение влево, положительное - вправо
+			speed: 20, // Скорость анимации (0 - максимальная)
+			mousestop: true // Останавливать ли полосу при наведении мыши (да - true, нет - false)
+		});
+		
+	});
