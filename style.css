@@ -5,7 +5,7 @@
 	--shades: rgba(238, 238, 238, 1.0);
 }
 
-* {
+/* * {
 	scroll-behavior: smooth;
 }
 
@@ -24,7 +24,7 @@
 .contact,
 .footer {
 	position: relative;
-}
+} */
 
 /* .header h1,
 .home h1,
@@ -81,7 +81,7 @@
 }
 
 .sticky {
-	/* position: -webkit-sticky; */
+	position: -webkit-sticky;
 	position: sticky;
 	top: 0;
 	z-index: 1;
@@ -319,8 +319,6 @@ body {
 	margin: 0;
 	font: normal 75% Arial;
 	background: #161616;
-	/* background-image: url("orig-1.gif"); */
-	/* background-color: #b7dbef; */
 	background-repeat: no-repeat;
 	background-size: cover;
 	z-index: -1;
@@ -644,6 +642,7 @@ h1 {
 	justify-content: center;
 	position: relative;
 	width: 100%;
+  flex-wrap: wrap;
 }
 
 .container-about {
