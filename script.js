@@ -109,21 +109,30 @@ particlesJS("particles-js", {
     "retina_detect": true
   });
 
-
-  gsap.to(".pi", {
+     gsap.to(".pi", {
       text:"My name is Olga. I`m web-developer...",
       duration:4,
       repeatDelay:.7,
       ease:"power1.in",
       yoyo:true,
-      y:10,
+    
       delay:2,
       })
-      // gsap.from (".pii", {y:-15, opacity:0, duration:3, delay:2, stagger:.1})
+
+      gsap.to (".pii", {
+      text:"Junior frontend web developer. "+" ",
+      y:-15, 
+      repeatDelay:1.7,
+      ease:"power1.in",
+      yoyo:true,
+      delay:6,
+      duration:5, 
+      repeat:-1,
+      stagger:.1})
 
   gsap.from(".wrapper", {opacity:0, duration:2, delay:2, stagger:.3})
-  gsap.to(".btn", {y:-30, opacity:1,ease:"power1.in", yoyo:true, duration:3, delay:9})
-
+  gsap.to(".btn", {x:10,opacity:1,ease:"power1.in", yoyo:true, duration:3, delay:9})
+  gsap.from(".container-about",{x:-1000, duration:5,delay:.5, ease: "elastic.out(1, 0.3)"})
   gsap.from(".skill-item",  {y:30, opacity:0, duration:4, delay:1, stagger:.6})
 
   $(function(){
@@ -146,7 +155,8 @@ particlesJS("particles-js", {
   let modal = document.querySelector('#myModal');
 
 let btn = document.querySelector("#myBtn");
-var span = document.getElementsByClassName("close")[0];
+// let span = document.getElementsByClassName("close")[0];
+let span =document.querySelector(".close");
 
 
 btn.onclick = function() {
@@ -163,16 +173,4 @@ window.onclick = function(event) {
       modal.style.display = "none";
   }
 }
-   // modal window 
-
-   $(window).load(function () {
-	
-		$("#content").endlessScroll({ 
-			width: "100%", // Ширина строки
-			height: "70px", // Высота строки
-			steps: -2, // Шаг анимации в пикселях. Если число отрицательное - движение влево, положительное - вправо
-			speed: 20, // Скорость анимации (0 - максимальная)
-			mousestop: true // Останавливать ли полосу при наведении мыши (да - true, нет - false)
-		});
-		
-	});
+  
