@@ -152,25 +152,19 @@ particlesJS("particles-js", {
 
 
   // modal window
-  let modal = document.querySelector('#myModal');
-
+   let modal = document.querySelector('#myModal');
 let btn = document.querySelector("#myBtn");
-// let span = document.getElementsByClassName("close")[0];
 let span =document.querySelector(".close");
 
 
-btn.onclick = function() {
+btn.addEventListener("click", open)
+
+function open () {
     modal.style.display = "block";
 }
 
-span.onclick= function() {
+span.addEventListener("click", close)
+
+function close (){
   modal.style.display = "none";
 }
-
-
-window.onclick = function(event) {
-  if (event.target == modal) {
-      modal.style.display = "none";
-  }
-}
-  
