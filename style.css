@@ -588,6 +588,7 @@ textarea {
 	flex-direction: column;
 	margin: 0%;
 	width: 100%;
+  height: 100%;
 }
 
 .social-media-list {
@@ -609,7 +610,6 @@ textarea {
 	display: flex;
 	justify-content: center;
 	align-self: center;
-
 	color: #ddd;
 	text-shadow: rgba(255, 255, 255, .5) 1px 1px, rgba(100, 100, 100, .3) 3px 7px 3px;
 }
