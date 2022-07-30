@@ -5,11 +5,10 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Portfolio Olga Semizorova</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
       <link rel="stylesheet" href="style.css">
       <link href="https://fonts.googleapis.com/css2?family=Glory:ital,wght@1,200&family=Italianno&family=Preahvihear&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-         crossorigin="anonymous" />
       <script src="https://kit.fontawesome.com/54bcb05d86.js" crossorigin="anonymous"></script>
    </head>
    <body>
@@ -19,50 +18,37 @@
             <p> Hello Wold. I`m new here...</p>
          </div>
          <div  class="pii marquee" id="content" >
-<!--             
-            <span> Junior frontend web developer <br>
-             My Technical skills:   <br>
-            HTML, CSS, JavaScript,<br>
-            CSS preprocessors (Sass in progress), <br>
-            JavaScript frameworks (React in progress),<br>
-            CSS frameworks (Bootstrap)  <br>
-            My Soft skills: <br>
-            good communication, <br>
-            creativity and willingness to learn, <br>
-            problem-solving </span> -->
-          
+            <br>
+            <br>
          </div>
-          <br>
-          <br>
-          <br>
+         <br>
          <div class="btn">
             <a href="#portfolio"><button class="button9">Learn More</button></a>
          </div>
-
       </header>
       <a href="#home" id="scroll_top" title="Наверх"></a>
-      <nav class="sticky navbar">
-         <div class="brand  display__logo">
-            <a href="#top" class="nav__link"> <span class="logo">Olga Semizorova</span></a>
-         </div>
-         <input type="checkbox" id="nav" class="hidden" />
-         <label for="nav" class="nav__open"><i></i><i></i><i></i></label>
-         <div class="nav">
-            <ul class="nav__items">
-               <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-               <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-               <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
-               <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-            </ul>
+      <nav class="navbar sticky-top navbar-dark bg-dark">
+         <div class="container-fluid">
+            <a class="navbar-brand" id="logo" href="#">Olga Semizorova</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup" >
+               <div class="navbar-nav">
+                  <a id="nav__items" class="nav-link active" aria-current="page" href="#home">Home</a>
+                  <a id="nav__items" class="nav-link active" href="#about">About</a>
+                  <a id="nav__items" class="nav-link active" href="#portfolio">Portfolio</a>
+                  <a id="nav__items" class="nav-link active" href="#contact">Contact</a>
+               </div>
+            </div>
          </div>
       </nav>
       <section class="main">
          <section class="about">
             <div id="about">
-               <!-- <h1>About</h1> -->
+               <h1>About</h1>
                <div class="skill-container">
                   <div class="container-about">
-                     <!-- <img src="36.jpg" alt="Avatar" class="image"> -->
                   </div>
                   <div class="skills">
                      <ul >
@@ -83,19 +69,19 @@
             <div id="myModal" class="modal">
                <div class="modal-content">
                   <div class="modal-header">
+                     <h5>Olga Semizorova</h5>
                      <span class="close">&times;</span>
-                     <h2>Olga Semizorova</h2>
                   </div>
                   <div class="modal-body">
                      <div class="cv-info">
-                        <h1>PERSONAL STATEMENT</h1>
+                        <p class="cv-header">PERSONAL STATEMENT</p>
                         <p class="cv-par">Junior Web Developer having 1+ year of experience in the IT field. 
                            Strong experience in development of web applications for using HTML, CSS, JavaScript, 
                            JSON. Moderate knowledge and experience with UX/UI design and Figma. 
                            Good experience and knowledge of the GSAP JavaScript toolset, and CSS framework like Bootstrap.
                         </p>
-                        <h1>WORK EXPERIENCE</h1>
-                        <h3 class="cv-job-position">Contract Web Developer</h3>
+                        <p class="cv-header">WORK EXPERIENCE</p>
+                        <p class="cv-job-position">Contract Web Developer</p>
                         <p class="cv-responsibilities">Responsibilities:</p>
                         <ul class="cv-list">
                            <li>Front-end programming for a company website.</li>
@@ -105,42 +91,41 @@
                            </li>
                            <li>Accomplishing tasks in a short time and quick response to frequently changing project requirements</li>
                         </ul>
-                        <h1>EDUCATION</h1>
+                        <p class="cv-header">EDUCATION</p>
                         <p class="cv-par">HTML5, CSS3, Bootstrap 5, JavaScript, React.js (in progress) courses at CanSheCode IT School (Canada) + self-education - May 2021 - Present</p>
                      </div>
                      <div class="right-side-container">
                         <div class="cv-languages-container">
-                           <h1 class="cv-header">LANGUAGES</h1>
+                           <p class="cv-header">LANGUAGES</p>
                            <p class="cv-address">English </p>
                            <p class="cv-address">Spanish </p>
                            <p class="cv-address">Russian (native)</p>
                         </div>
                         <div class="cv-references-container">
-                           <h1 class="cv-header">REFERENCES</h1>
+                           <p class="cv-header">REFERENCES</p>
                            <p class="cv-address">CanSheCode IT School <br> Alla, Founder &amp; <a class="email-link" href="mailto:canshecode@gmail.com">E-mail Alla</a></p>
                         </div>
                      </div>
                   </div>
                   <div class="modal-footer">
-                     <h3>CONTACT DETAILS</h3>
+                     <h6>CONTACT DETAILS</h6>
                      <p class="cv-email"> <a class="email-link" href="mailto:olga.semizorova.os@gmail.com">My e-mail</a></p>
                   </div>
                </div>
             </div>
          </section>
          <br>
-         <br>
          <section class="portfolio">
             <div id="portfolio">
+               <h1>Portfolio</h1>
                <br>
                <div class="wrapper">
                   <div class="cols">
                      <div class="col" ontouchstart="this.classList.toggle('hover');">
                         <div class="container">
-                           <div class="front" style="background-image: url(https://cdn.glitch.global/241a930a-0b39-4f77-b845-ed4d22ed6c9d/2022-07-15_21-02-54.png?v=1658671299036)" >
+                           <div class="front" style="background-image: url(2022-07-15_21-02-54.png)" >
                               <div class="inner">
                                  <p>Games</p>
-                                 <!-- <span>Lorem ipsum</span> -->
                               </div>
                            </div>
                            <div class="back">
@@ -156,7 +141,6 @@
                            <div class="front" style="background-image:url(2022-07-20_18-50-33.png)">
                               <div class="inner">
                                  <p>Calculators & Converters</p>
-                                 <!-- <span>Lorem ipsum</span> -->
                               </div>
                            </div>
                            <div class="back">
@@ -169,10 +153,9 @@
                      </div>
                      <div class="col" ontouchstart="this.classList.toggle('hover');">
                         <div class="container">
-                           <div class="front" style="background-image: url(https://cdn.glitch.global/241a930a-0b39-4f77-b845-ed4d22ed6c9d/2022-07-15_21-24-05.png?v=1658673720614)">
+                           <div class="front" style="background-image: url(2022-07-15_21-24-05.png)">
                               <div class="inner">
                                  <p>Wether Forecast</p>
-                                 <!-- <span>Lorem ipsum</span> -->
                               </div>
                            </div>
                            <div class="back">
@@ -187,10 +170,9 @@
                      </div>
                      <div class="col" ontouchstart="this.classList.toggle('hover');">
                         <div class="container">
-                           <div class="front" style="background-image: url(https://cdn.glitch.global/241a930a-0b39-4f77-b845-ed4d22ed6c9d/2022-07-15_21-21-09.png?v=1658673663672)">
+                           <div class="front" style="background-image: url(2022-07-15_21-28-34.png)">
                               <div class="inner">
                                  <p>Landing pages</p>
-                                 <!-- <span>Lorem ipsum</span> -->
                               </div>
                            </div>
                            <div class="back">
@@ -203,10 +185,9 @@
                      </div>
                      <div class="col" ontouchstart="this.classList.toggle('hover');">
                         <div class="container">
-                           <div class="front" style="background-image: url(https://cdn.glitch.global/241a930a-0b39-4f77-b845-ed4d22ed6c9d/2022-07-15_21-19-26.png?v=1658673461079)">
+                           <div class="front" style="background-image: url(2022-07-15_21-33-15.png)">
                               <div class="inner">
                                  <p>Timers</p>
-                                 <!-- <span>Lorem ipsum</span> -->
                               </div>
                            </div>
                            <div class="back">
@@ -228,25 +209,21 @@
          </section>
          <section class="contact">
             <div id="contact">
-               <!-- <h1>Contact</h1> -->
+               <h1>Contact</h1>
                <form
                   action="https://formspree.io/f/xjvlqeoy"
                   method="POST"
                   >
-                  <h2>I would like to work with You!</h2>
+                  <p class="head">I would like to work with You!</p>
                   <label>
-                     <!-- Name: -->
-                     <input type="text" name="name" placeholder="Name:">
+                  <input type="text" name="name" placeholder="Name:">
                   </label>
                   <label>
-                     <!-- Your email: -->
-                     <input type="email" name="email" placeholder="Your email:">
+                  <input type="email" name="email" placeholder="Your email:">
                   </label>
                   <label>
-                     <!-- Your message: -->
-                     <textarea name="message" placeholder="Your message:"></textarea>
+                  <textarea name="message" placeholder="Your message:"></textarea>
                   </label>
-                  <!-- your other form fields go here -->
                   <button class="button9" type="submit">Send me messenge</button>
                </form>
             </div>
@@ -270,9 +247,10 @@
                <i class="fa-brands fa-linkedin"></i></a>
             </li>
          </ul>
-         <p class="watermark">Some images on this website have been taken from the Internet for educational purposes 
-            <br>
-            <br>
+         <p class="watermark">
+            Some images on this website have been taken from the Internet 
+         </p>
+         <p class="watermark">  for educational purposes 
          </p>
          <span class="year">©2022</span> 
       </footer>
@@ -282,4 +260,3 @@
       <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"> </script>
       <script src="script.js"> </script>
    </body>
-</html>
