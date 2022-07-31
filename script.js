@@ -111,12 +111,11 @@ particlesJS("particles-js", {
 
      gsap.to(".pi", {
       text:"My name is Olga. I`m web-developer...",
-      duration:4,
-      repeatDelay:.7,
+      duration:2,
+      repeatDelay:.3,
       ease:"power1.in",
       yoyo:true,
-    
-      delay:2,
+      delay:0.6,
       })
 
       gsap.to (".pii", {
@@ -125,15 +124,15 @@ particlesJS("particles-js", {
       repeatDelay:1.7,
       ease:"power1.in",
       yoyo:true,
-      delay:6,
-      duration:5, 
+      delay:2,
+      duration:3, 
       repeat:-1,
       stagger:.1})
 
-  gsap.from(".wrapper", {opacity:0, duration:2, delay:2, stagger:.3})
-  gsap.to(".btn", {x:10,opacity:1,ease:"power1.in", yoyo:true, duration:3, delay:9})
-  gsap.from(".container-about",{x:-1000, duration:5,delay:.5, ease: "elastic.out(1, 0.3)"})
-  gsap.from(".skill-item",  {y:30, opacity:0, duration:4, delay:1, stagger:.6})
+  gsap.from(".col", {opacity:0, duration:3, delay:1, stagger:1})
+  gsap.to(".btn", {x:10,opacity:1,ease:"power1.in", yoyo:true, duration:3, delay:4.5})
+  gsap.from(".container-about",{x:-1000, duration:2,delay:.2, ease: "elastic.out(1, 0.3)"})
+  gsap.from(".skill-item",  {y:30, opacity:0, duration:3, delay:1, stagger:.6})
 
   $(function(){
     $(window).scroll(function(){
