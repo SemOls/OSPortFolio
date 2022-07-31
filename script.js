@@ -133,6 +133,7 @@ particlesJS("particles-js", {
   gsap.to(".btn", {x:10,opacity:1,ease:"power1.in", yoyo:true, duration:3, delay:4.5})
   gsap.from(".container-about",{x:-1000, duration:2,delay:.2, ease: "elastic.out(1, 0.3)"})
   gsap.from(".skill-item",  {y:30, opacity:0, duration:3, delay:1, stagger:.6})
+gsap.from("#contact",{x:-1000, duration:2,delay:.2, ease: "elastic.out(1, 0.3)"})
 
   $(function(){
     $(window).scroll(function(){
