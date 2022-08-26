@@ -501,7 +501,7 @@ form {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	scale: 0;
+/* 	scale: 0; */
 	transition: all 0.5s ease .7s;
 	width: 100%;
 	height: 400px;
